@@ -31,7 +31,7 @@ var bodyParser = require('body-parser');
 var settings = {
   dbname: 'simple-api-auth',
   logFile: path.join(__dirname, 'authlogger.log'),
-  corsDomains: ['http://localhost:5000'],
+  corsDomains: ['http://localhost:3000', 'http://localhost:3001'],
   // Nodemailer settings, used for resetting password
   mailer: {
     mailerFrom    : 'your.mail@example.com',
@@ -53,7 +53,7 @@ app.get('/api/test', auth, function(req, res) {
   res.send('Secured access.');
 });
 
-server.listen(3000);
+server.listen(5000);
 
 ```
 
