@@ -1,9 +1,7 @@
 'use strict';
 
-angular.module('NgAuth', ['NgAuth.config','ngResource', 'ngRoute', 'ngAnimate', 'mgcrea.ngStrap'])
-  .config(function ($routeProvider, $locationProvider) {
-
-    // $locationProvider.html5Mode(true);
+angular.module('NgAuth', ['ngResource', 'ngRoute', 'ngAnimate', 'mgcrea.ngStrap'])
+  .config(function ($routeProvider) {
 
     $routeProvider
       .when('/', {
@@ -59,6 +57,9 @@ angular.module('NgAuth', ['NgAuth.config','ngResource', 'ngRoute', 'ngAnimate', 
       };
     });
   })
+  .constant('apiUrl', 'http://localhost:5000')
+  .constant('KeepAliveInterval', '250')
+  .constant('resetPasswordUrl', 'http://localhost:3000/#')
   .run(function ($rootScope, $interval, Auth, KeepAliveInterval) {
     var keepAlive;
     if ($rootScope.currentUser) {

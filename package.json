@@ -1,6 +1,6 @@
 {
-  "name": "demoApp",
-  "version": "0.0.0",
+  "name": "angularjs-simple-auth",
+  "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.0",

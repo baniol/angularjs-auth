@@ -1,7 +1,0 @@
-{
-  "name": "NgAuth.config",
-  "constants": {
-    "apiUrl": "http://localhost:5000",
-    "KeepAliveInterval": "250"
-  }
-}

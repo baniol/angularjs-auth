@@ -6,7 +6,7 @@ angular.module('NgAuth')
       // @TODO a separate directive
       $scope.inProgress = true;
       $scope.mailSent = false;
-      Auth.forgotPassword({email: $scope.email})
+      Auth.forgotPassword($scope.email)
       .success(function () {
         // @TODO a separate directive
         $scope.inProgress = false;
