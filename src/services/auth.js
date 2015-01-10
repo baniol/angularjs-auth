@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('NgAuth')
-  .factory('Auth', function ($http, $rootScope, $window, apiUrl) {
+  .factory('Auth', function ($http, $rootScope, $window, apiUrl, resetPasswordUrl) {
 
     var token = $window.localStorage.token;
     if (token) {
@@ -53,7 +53,8 @@ angular.module('NgAuth')
         return $http.post(apiUrl + '/checkauth');
       },
       forgotPassword: function (email) {
-        return $http.post(apiUrl + '/remindpassword/', email);
+        var data = {url: resetPasswordUrl, email: email};
+        return $http.post(apiUrl + '/remindpassword/', data);
       },
       resetPassword: function (token, password) {
         var data = {token: token, password: password};

@@ -29,9 +29,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var settings = {
-  dbname: 'simple-api-auth',
+  mongoconnection: 'mongodb://localhost:27017/simple-api-auth',
   logFile: path.join(__dirname, 'authlogger.log'),
-  corsDomains: ['http://localhost:3000', 'http://localhost:3001'],
+  corsDomains: ['http://localhost:3000'],
   // Nodemailer settings, used for resetting password
   mailer: {
     mailerFrom    : 'your.mail@example.com',
