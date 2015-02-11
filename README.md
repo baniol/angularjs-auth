@@ -1,3 +1,5 @@
+### For more up to date example of using `express-jwt-auth` with angular check: [`angular-auth-foundation`](https://github.com/baniol/angular-auth-foundation) repository.
+------------------------
 ### AngularJS authorisation example.
 
 ### Installation
